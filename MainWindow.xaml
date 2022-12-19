@@ -32,8 +32,16 @@
                     <Button HorizontalAlignment="Right" Content="Войти"
                             Style="{StaticResource MaterialDesignFlatButton}"/>                    
                 </Grid>
-                <!--cоздаем текстовое поле с подсказкой из библиотеки MD-->
-                <TextBox materialDesign:HintAssist.Hint=""/>
+                <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
+                <TextBox materialDesign:HintAssist.Hint="Введите логин"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль"
+                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль"
+                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <TextBox materialDesign:HintAssist.Hint="Введите логин"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                
             </StackPanel>
         </Border> <!--конец поля-->
     </Grid>
