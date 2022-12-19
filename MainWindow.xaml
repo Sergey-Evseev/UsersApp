@@ -19,9 +19,21 @@
                 <DropShadowEffect BlurRadius="30"
                                   Color="LightGray"/>
             </Border.Effect>
+            
             <StackPanel> <!--упорядоч. стек объектов-->
                 <TextBlock Text="Hello!"
-                           FontSize="30"/>
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                  <!--внутри грида создаем кнопки-->
+                    <Button HorizontalAlignment="Left" Content="Регистрация"/>
+                    <!--у второй кнопки берем стиль из MaterialDesign-->
+                    <Button HorizontalAlignment="Right" Content="Войти"
+                            Style="{StaticResource MaterialDesignFlatButton}"/>                    
+                </Grid>
+                <!--cоздаем текстовое поле с подсказкой из библиотеки MD-->
+                <TextBox materialDesign:HintAssist.Hint=""/>
             </StackPanel>
         </Border> <!--конец поля-->
     </Grid>
