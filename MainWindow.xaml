@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UsersApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="User Application" Height="600" Width="1000">
+    <Grid Background="#ffdadaca">
+        <!--начало поля-->
+        <Border MinWidth="400" Margin="15" 
+                Background="White"
+                VerticalAlignment="Center"
+                Padding="30"
+                MaxWidth="550"
+                CornerRadius="20">
+            <Border.Effect> <!--внутр.объект эффектов поля--> 
+                <DropShadowEffect BlurRadius="30"
+                                  Color="LightGray"/>
+            </Border.Effect>
+            <StackPanel> <!--упорядоч. стек объектов-->
+                <TextBlock Text="Hello!"
+                           FontSize="30"/>
+            </StackPanel>
+        </Border> <!--конец поля-->
     </Grid>
 </Window>
