@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UsersApp"
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="User Application" Height="600" Width="1000">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
+        Title="User Application" Height="600" Width="800">
+        <!--название и размеры главного окна пограммы-->
     <Grid Background="#ffdadaca">
         <!--начало поля-->
         <Border MinWidth="400" Margin="15" 
@@ -20,7 +21,7 @@
                                   Color="LightGray"/>
             </Border.Effect>
             
-            <StackPanel> <!--упорядоч. стек объектов-->
+            <StackPanel> <!--упорядоч. стек объектов друг над другом-->
                 <TextBlock Text="Hello!"
                            FontSize="30"
                            FontWeight="Bold"
@@ -39,9 +40,9 @@
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
                 <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-                <TextBox materialDesign:HintAssist.Hint="Введите логин"
+                <TextBox materialDesign:HintAssist.Hint="E-mail"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                
+                <Button Content="Зарегистрироваться" Margin="0 20"/>
             </StackPanel>
         </Border> <!--конец поля-->
     </Grid>
