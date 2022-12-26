@@ -24,5 +24,10 @@ namespace UsersApp
         {
             InitializeComponent();
         }
+
+        private void Button_Reg_Click(object sender, RoutedEventArgs e)
+        {
+            string login;
+        }
     }
 }

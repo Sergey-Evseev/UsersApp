@@ -34,15 +34,16 @@
                             Style="{StaticResource MaterialDesignFlatButton}"/>                    
                 </Grid>
                 <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
-                <TextBox materialDesign:HintAssist.Hint="Введите логин"
+                <TextBox x:Name="texBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль"
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль"
+                <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Повторите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-                <TextBox materialDesign:HintAssist.Hint="E-mail"
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="E-mail"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <Button Content="Зарегистрироваться" Margin="0 20"/>
+                <Button Content="Зарегистрироваться" Margin="0 20" 
+                        Click="Button_Reg_Click"/>            
             </StackPanel>
         </Border> <!--конец поля-->
     </Grid>
