@@ -34,7 +34,8 @@
                             Style="{StaticResource MaterialDesignFlatButton}"/>                    
                 </Grid>
                 <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
-                <TextBox x:Name="texBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
+                <!--присваиваем объектам идентификаторы-->
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
