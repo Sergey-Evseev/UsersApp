@@ -54,7 +54,7 @@ namespace UsersApp
                 textBoxEmail.ToolTip = "E-mail is incorrect!";
                 textBoxEmail.Background = Brushes.DarkRed;
             }
-            else //если ошибок нет, то устанавливаем все подсказки пустыми, а фон полей прозрачным
+            else //если ошибок нет, то по нажатию кнопки устанавливаем все подсказки пустыми, а фон полей прозрачным
             {
                 textBoxLogin.ToolTip = "";
                 textBoxLogin.Background = Brushes.Transparent;
@@ -68,7 +68,7 @@ namespace UsersApp
                 textBoxEmail.ToolTip = "";
                 textBoxEmail.Background = Brushes.Transparent;
 
-                MessageBox.Show("Everything's OK");
+                MessageBox.Show("Everything's OK", "Success");
             }
         }
     }
