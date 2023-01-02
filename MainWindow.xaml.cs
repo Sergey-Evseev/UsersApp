@@ -27,9 +27,6 @@ namespace UsersApp
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            string login;
-=======
             //записываем в строковые переменные переданные значения полей текстбоксов имя и мейл и пассвордбоксов
             string login = textBoxLogin.Text.Trim();//Trim удаляет пробелы в начале и конце строки
             string pass = passBox.Password.Trim();
@@ -57,7 +54,7 @@ namespace UsersApp
                 textBoxEmail.ToolTip = "E-mail is incorrect!";
                 textBoxEmail.Background = Brushes.DarkRed;
             }
-            else //если ошибок нет, то устанавливаем все подсказки пустыми, а фон полей прозрачным
+            else //если ошибок нет, то по нажатию кнопки устанавливаем все подсказки пустыми, а фон полей прозрачным
             {
                 textBoxLogin.ToolTip = "";
                 textBoxLogin.Background = Brushes.Transparent;
@@ -71,9 +68,8 @@ namespace UsersApp
                 textBoxEmail.ToolTip = "";
                 textBoxEmail.Background = Brushes.Transparent;
 
-                MessageBox.Show("Everything's OK");
+                MessageBox.Show("Everything's OK", "Success");
             }
->>>>>>> parent of 7615959... connect to DB
         }
     }
 }
