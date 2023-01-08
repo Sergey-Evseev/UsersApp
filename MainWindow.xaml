@@ -26,6 +26,11 @@
                            FontSize="30"
                            FontWeight="Bold"
                            Margin="0 0 0 20"/>
+                <!--тестовое текстовое поле для вывода записей базы-->
+                <TextBlock x:Name="exampleText"
+                           FontWeight="Bold"
+                           Margin="0 0 0 20"/>
+
                 <Grid Margin="0 0 0 20">
                   <!--внутри грида создаем кнопки-->
                     <Button HorizontalAlignment="Left" Content="Регистрация"/>

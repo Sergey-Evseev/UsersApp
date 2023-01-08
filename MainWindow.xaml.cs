@@ -26,6 +26,18 @@ namespace UsersApp
             InitializeComponent();
 
             db = new ApplicationContext(); //выделение памяти под объект класса 
+
+            //временный список и вывод в текстовое поле для контроля записи в базу
+            List<User> users = db.Users.ToList();
+            string str = "";
+            foreach (User user in users) // в цикле перебираем каждую запись данного типа
+            {
+                //в строку собираем поля каждой записи класса User доступом через их свойства
+                str += "Login: " + user.Login + " E-mail: " + user.Email + " Password: " + user.Pass +"\n";
+
+                exampleText.Text = str; //в поле устанавливаем нашу переменную с записями
+            }
+
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
