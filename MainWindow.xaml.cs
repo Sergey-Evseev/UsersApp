@@ -20,9 +20,12 @@ namespace UsersApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplicationContext db; //создаем ссылку на объект класса
         public MainWindow()
         {
             InitializeComponent();
+
+            db = new ApplicationContext(); //выделение памяти под объект класса 
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
@@ -69,6 +72,10 @@ namespace UsersApp
                 textBoxEmail.Background = Brushes.Transparent;
 
                 MessageBox.Show("Everything's OK", "Success");
+
+                User user = new User(login, email, pass); //объект класса с параметрами на основе класса-модели
+                db.Users.Add(user); //добавление объекта User в список (DbSet)
+                db.SaveChanges(); //обмен с базой данных - сохранение объекта внутри базы данных
             }
         }
     }
