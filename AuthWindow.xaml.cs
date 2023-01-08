@@ -56,7 +56,8 @@ namespace UsersApp
                 if (authUser != null) //если user найден 
                     MessageBox.Show("Everything's OK!", "Success");
                 else //если совпадения не найдены
-                    MessageBox.Show("Incorrect credentials!", "Error", MessageBoxButton.OK, (MessageBoxImage)MessageBoxImage.Error );
+                    MessageBox.Show("Incorrect credentials!", "Error", MessageBoxButton.OK, 
+                        (MessageBoxImage)MessageBoxImage.Error );
             }
         }
     }
