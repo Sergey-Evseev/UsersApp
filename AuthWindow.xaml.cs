@@ -47,6 +47,15 @@ namespace UsersApp
 
                 passBox.ToolTip = "";
                 passBox.Background = Brushes.Transparent;
+
+                User authUser = null;
+                using (ApplicationContext db = new ApplicationContext())
+                {
+                    authUser = db.Users.Where(b => b.Login == login && b.Pass == pass).FirstOrDefault();
+                }
+
+
+                    MessageBox.Show("Everything's OK", "Success");
             }
         }
     }

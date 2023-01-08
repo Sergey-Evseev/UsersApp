@@ -46,7 +46,7 @@ namespace UsersApp
             string login = textBoxLogin.Text.Trim();//Trim удаляет пробелы в начале и конце строки
             string pass = passBox.Password.Trim();
             string pass_2 = passBox_2.Password.Trim();
-            string email = textBoxEmail.Text.ToLower(); /*приведение мейла к нижнему регистру*/
+            string email = textBoxEmail.Text.Trim().ToLower(); /*приведение мейла к нижнему регистру*/
             //проверки 
             if (login.Length < 5) //если введенный логин меньше 5 символов (или не введен вовсе)
             {
