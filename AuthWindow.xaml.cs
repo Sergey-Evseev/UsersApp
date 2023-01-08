@@ -23,5 +23,31 @@ namespace UsersApp
         {
             InitializeComponent();
         }
+
+        private void Button_Auth_Click(object sender, RoutedEventArgs e)
+        {
+            string login = textBoxLogin.Text.Trim();
+            string pass = passBox.Password.Trim();
+
+            //проверки 
+            if (login.Length < 5) //если введенный логин меньше 5 символов (или не введен вовсе)
+            {
+                textBoxLogin.ToolTip = "Login is too short!"; //вывести соответствующее сообщение 
+                textBoxLogin.Background = Brushes.DarkRed; //через класс Brushes меняем цвет фона
+            }
+            else if (pass.Length < 5)
+            {
+                passBox.ToolTip = "Password is too short!"; //вывести соответствующее сообщение 
+                passBox.Background = Brushes.DarkRed; //через класс Brushes меняем цвет фона
+            }
+            else //установка полей пустыми при корректном вводе 
+            {
+                textBoxLogin.ToolTip = "";
+                textBoxLogin.Background = Brushes.Transparent;
+
+                passBox.ToolTip = "";
+                passBox.Background = Brushes.Transparent;
+            }
+        }
     }
 }

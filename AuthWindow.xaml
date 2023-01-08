@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UsersApp"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
-        Title="Authorization" Height="600" Width="800">
+        Title="Authorization" Height="450" Width="800">
     <!--название и размеры главного окна пограммы-->
     <Grid Background="#ffdadaca">
         <!--начало поля-->
@@ -31,7 +31,7 @@
 
                 <Grid Margin="0 0 0 20">
                     <!--внутри грида создаем кнопки-->
-                    <Button HorizontalAlignment="Left" Content="Регистрация"/>
+                    <Button HorizontalAlignment="Left" Content="Registration"/>
                     <!--у второй кнопки берем стиль из MaterialDesign-->
                     <Button HorizontalAlignment="Right" Content="Войти"
                             Style="{StaticResource MaterialDesignFlatButton}"/>
@@ -43,8 +43,8 @@
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
                 
-                <Button Content="Зарегистрироваться" Margin="0 20" 
-                        Click="Button_Reg_Click"/>
+                <Button Content="Login" Margin="0 20" 
+                        Click="Button_Auth_Click"/>
             </StackPanel>
         </Border>
         <!--конец поля-->
