@@ -53,9 +53,10 @@ namespace UsersApp
                 {
                     authUser = db.Users.Where(b => b.Login == login && b.Pass == pass).FirstOrDefault();
                 }
-
-
-                    MessageBox.Show("Everything's OK", "Success");
+                if (authUser != null) //если user найден 
+                    MessageBox.Show("Everything's OK!", "Success");
+                else //если совпадения не найдены
+                    MessageBox.Show("Incorrect credentials!", "Error", MessageBoxButton.OK, (MessageBoxImage)MessageBoxImage.Error );
             }
         }
     }
