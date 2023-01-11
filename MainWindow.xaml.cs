@@ -39,7 +39,7 @@ namespace UsersApp
             //}
             //end of output to temporary textbox 
         }
-
+        //обработчик кнопки Зарегистрироваться
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
             //записываем в строковые переменные переданные значения полей текстбоксов имя и мейл и пассвордбоксов
@@ -88,9 +88,14 @@ namespace UsersApp
                 User user = new User(login, email, pass); //объект класса с параметрами на основе класса-модели
                 db.Users.Add(user); //добавление объекта User в список (DbSet)
                 db.SaveChanges(); //обмен с базой данных - сохранение объекта внутри базы данных
+
+                AuthWindow authWindow = new AuthWindow();
+                authWindow.Show();
+                Hide(); //this.Hide();
             }
         }
 
+        //обработчик кнопки Войти - переадресация на окно авторизации AuthWindow
         private void Button_Window_Auth_Click(object sender, RoutedEventArgs e)
         {
             AuthWindow authWindow = new AuthWindow();

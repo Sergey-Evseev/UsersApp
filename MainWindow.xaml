@@ -39,7 +39,7 @@
                     <!--у второй кнопки берем стиль из MaterialDesign-->
                     <Button HorizontalAlignment="Left" Content="Войти"
                             Click="Button_Window_Auth_Click"
-                            Style="{StaticResource MaterialDesignFlatButton}" Height="32" Margin="418,0,0,0" VerticalAlignment="Bottom"/>
+                            Style="{StaticResource MaterialDesignFlatButton}" Margin="418,0,0,0"/>
                 </Grid>
                 <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
