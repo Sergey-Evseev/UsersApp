@@ -54,10 +54,16 @@ namespace UsersApp
                     authUser = db.Users.Where(b => b.Login == login && b.Pass == pass).FirstOrDefault();
                 }
                 if (authUser != null) //если user найден 
-                    MessageBox.Show("Everything's OK!", "Success");
+                {
+                    MessageBox.Show("Everything's OK!", "Success"); 
+                    UserPageWindow userPageWindow = new UserPageWindow();
+                    userPageWindow.Show();
+                    Hide();
+
+                }
                 else //если совпадения не найдены
-                    MessageBox.Show("Incorrect credentials!", "Error", MessageBoxButton.OK, 
-                        (MessageBoxImage)MessageBoxImage.Error );
+                    MessageBox.Show("Incorrect credentials!", "Error", MessageBoxButton.OK,
+                        (MessageBoxImage)MessageBoxImage.Error);
             }
         }
 
