@@ -31,7 +31,8 @@
 
                 <Grid Margin="0 0 0 20">
                     <!--внутри грида создаем кнопки-->
-                    <Button HorizontalAlignment="Left" Content="Registration"/>
+                    <Button HorizontalAlignment="Left" Content="Registration" 
+                            Click="Button_Reg_Click"/>
                     <!--у второй кнопки берем стиль из MaterialDesign-->
                     <Button HorizontalAlignment="Right" Content="Войти"
                             Style="{StaticResource MaterialDesignFlatButton}"/>

@@ -90,5 +90,12 @@ namespace UsersApp
                 db.SaveChanges(); //обмен с базой данных - сохранение объекта внутри базы данных
             }
         }
+
+        private void Button_Window_Auth_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            Hide(); //this.Hide();
+        }
     }
 }

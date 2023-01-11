@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
         Title="User Application" Height="600" Width="800">
-        <!--название и размеры главного окна пограммы-->
+    <!--название и размеры главного окна пограммы-->
     <Grid Background="#ffdadaca">
         <!--начало поля-->
         <Border MinWidth="400" Margin="15" 
@@ -16,12 +16,14 @@
                 Padding="30"
                 MaxWidth="550"
                 CornerRadius="20">
-            <Border.Effect> <!--внутр.объект эффектов поля--> 
+            <Border.Effect>
+                <!--внутр.объект эффектов поля-->
                 <DropShadowEffect BlurRadius="30"
                                   Color="LightGray"/>
             </Border.Effect>
-            
-            <StackPanel> <!--упорядоч. стек объектов друг над другом-->
+
+            <StackPanel>
+                <!--упорядоч. стек объектов друг над другом-->
                 <TextBlock Text="Hello!"
                            FontSize="30"
                            FontWeight="Bold"
@@ -32,11 +34,12 @@
                            Margin="0 0 0 20"/>-->
 
                 <Grid Margin="0 0 0 20">
-                  <!--внутри грида создаем кнопки-->
+                    <!--внутри грида создаем кнопки-->
                     <Button HorizontalAlignment="Left" Content="Регистрация"/>
                     <!--у второй кнопки берем стиль из MaterialDesign-->
-                    <Button HorizontalAlignment="Right" Content="Войти"
-                            Style="{StaticResource MaterialDesignFlatButton}"/>                    
+                    <Button HorizontalAlignment="Left" Content="Войти"
+                            Click="Button_Window_Auth_Click"
+                            Style="{StaticResource MaterialDesignFlatButton}" Height="32" Margin="418,0,0,0" VerticalAlignment="Bottom"/>
                 </Grid>
                 <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
@@ -48,8 +51,9 @@
                 <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="E-mail"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                 <Button Content="Зарегистрироваться" Margin="0 20" 
-                        Click="Button_Reg_Click"/>            
+                        Click="Button_Reg_Click"/>
             </StackPanel>
-        </Border> <!--конец поля-->
+        </Border>
+        <!--конец поля-->
     </Grid>
 </Window>
