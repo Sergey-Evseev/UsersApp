@@ -27,7 +27,7 @@ namespace UsersApp
 
             db = new ApplicationContext(); //выделение памяти под объект класса 
 
-            //временный список и вывод в текстовое поле для контроля записи в базу
+            //временный список и вывод в текстовое поле для контроля записи в базу///////
             //List<User> users = db.Users.ToList();
             //string str = "";
             //foreach (User user in users) // в цикле перебираем каждую запись данного типа
@@ -89,9 +89,10 @@ namespace UsersApp
                 db.Users.Add(user); //добавление объекта User в список (DbSet)
                 db.SaveChanges(); //обмен с базой данных - сохранение объекта внутри базы данных
 
+                //переадресация на окно авторизации в случае успешной регистрации
                 AuthWindow authWindow = new AuthWindow();
                 authWindow.Show();
-                Hide(); //this.Hide();
+                Close(); //this.Hide();
             }
         }
 
@@ -100,7 +101,7 @@ namespace UsersApp
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
-            Hide(); //this.Hide();
+            Close(); //this.Hide();
         }
     }
 }

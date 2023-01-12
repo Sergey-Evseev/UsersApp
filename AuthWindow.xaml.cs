@@ -56,9 +56,10 @@ namespace UsersApp
                 if (authUser != null) //если user найден 
                 {
                     MessageBox.Show("Everything's OK!", "Success"); 
+                    //переадресация на окно личного кабинета UserPageWindow//////////
                     UserPageWindow userPageWindow = new UserPageWindow();
                     userPageWindow.Show();
-                    Hide();
+                    Close(); //закрытие окна авторизации AuthWindow
 
                 }
                 else //если совпадения не найдены
@@ -66,12 +67,12 @@ namespace UsersApp
                         (MessageBoxImage)MessageBoxImage.Error);
             }
         }
-
+        //переадресация на форму регистрации главного окна MainWindow
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            Hide();
+            Close();
         }
     }
 }

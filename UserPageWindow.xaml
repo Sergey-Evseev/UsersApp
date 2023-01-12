@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UsersApp"
         mc:Ignorable="d"
-        Title="UserPageWindow" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"        
+        Title="Personal account" Height="350" Width="600">
+    <!--название и размеры главного окна пограммы-->
+    <Grid Background="#ffdadaca">
+        <!--начало поля-->
+        <Border MinWidth="400" Margin="15" 
+                Background="White"
+                VerticalAlignment="Center"
+                Padding="30"
+                MaxWidth="550"
+                CornerRadius="20">
+            <Border.Effect>
+                <!--внутр.объект эффектов поля-->
+                <DropShadowEffect BlurRadius="30"
+                                  Color="LightGray"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <!--упорядоч. стек объектов друг над другом-->
+                <TextBlock Text="Personal account"
+                           HorizontalAlignment="Center"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Margin="0 0 0 20"/>
+
+                <!--Список типпа ListView для вывода записе базы-->
+                <ListView x:Name="listOfUsers" Margin="10"/>
+
+            </StackPanel>
+        </Border>
+        <!--конец поля-->
     </Grid>
 </Window>
