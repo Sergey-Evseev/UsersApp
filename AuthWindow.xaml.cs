@@ -48,6 +48,7 @@ namespace UsersApp
                 passBox.ToolTip = "";
                 passBox.Background = Brushes.Transparent;
 
+                //проверка пользователя в БД
                 User authUser = null;
                 using (ApplicationContext db = new ApplicationContext())
                 {

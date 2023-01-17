@@ -30,8 +30,11 @@
                            FontWeight="Bold"
                            Margin="0 0 0 20"/>
 
-                <!--Список типпа ListView для вывода записе базы-->
-                <ListView x:Name="listOfUsers" Margin="10"/>
+                <!--Список типа ListView для вывода записе базы-->
+                <ListView x:Name="listOfUsers" Margin="10">
+                    
+                
+                </ListView>
 
             </StackPanel>
         </Border>

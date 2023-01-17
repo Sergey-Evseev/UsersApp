@@ -16,7 +16,7 @@ namespace UsersApp
         public DbSet<User> Users { get; set; }
 
         //в конструктор ничего не принимаем, но передаем название подключения из App.config
-        //которое указано в поле name в строке с базой данных - DefaultConnection
+        //которое указано в поле name в строке 9 с базой данных - DefaultConnection
         public ApplicationContext() : base("DefaultConnection")
         { 
         
