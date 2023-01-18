@@ -32,8 +32,15 @@
 
                 <!--Список типа ListView для вывода записе базы-->
                 <ListView x:Name="listOfUsers" Margin="10">
-                    
-                
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <TextBlock Text="{Binding Login}" FontWeight="Bold"/>
+                                <TextBlock Text=", " FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Email}"/>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>                       
                 </ListView>
 
             </StackPanel>
