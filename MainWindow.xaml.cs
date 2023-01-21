@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace UsersApp
 {
@@ -26,6 +27,15 @@ namespace UsersApp
             InitializeComponent();
 
             db = new ApplicationContext(); //выделение памяти под объект класса 
+
+            //объект класса анимации
+            DoubleAnimation btnAnimation = new DoubleAnimation();
+            btnAnimation.From = 0; //стартовый размер кнопки при запуске
+            btnAnimation.To = 450; //конечный размер кнопки
+            btnAnimation.Duration = TimeSpan.FromSeconds(3); //время расширения в секундах
+            //к кнопке цепляем обработчик анимации с параметрами 
+            //который принимает параметрами свойство ширина кнопки и саму анимацию
+            regButton.BeginAnimation(Button.WidthProperty, btnAnimation);
 
             //временный список и вывод в текстовое поле для контроля записи в базу///////
             //List<User> users = db.Users.ToList();

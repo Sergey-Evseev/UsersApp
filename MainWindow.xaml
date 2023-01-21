@@ -50,7 +50,7 @@
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
                 <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="E-mail"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <Button Content="Зарегистрироваться" Margin="0 20" 
+                <Button Content="Зарегистрироваться" x:Name="regButton" Margin="0 20" 
                         Click="Button_Reg_Click"/>
             </StackPanel>
         </Border>
