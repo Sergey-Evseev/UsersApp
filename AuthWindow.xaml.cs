@@ -60,7 +60,7 @@ namespace UsersApp
                     //переадресация на окно личного кабинета UserPageWindow//////////
                     UserPageWindow userPageWindow = new UserPageWindow();
                     userPageWindow.Show();
-                    Close(); //закрытие окна авторизации AuthWindow
+                    Close(); //закрытие окна авторизации AuthWindow 
 
                 }
                 else //если совпадения не найдены
