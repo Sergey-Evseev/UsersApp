@@ -113,5 +113,14 @@ namespace UsersApp
             authWindow.Show();
             Close(); //this.Hide();
         }
+
+        //вызов обработчика кнопки Зарегистрироваться при нажатии Enter на поле Email
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Button_Reg_Click(sender, e);
+            }    
+        }
     }
 }

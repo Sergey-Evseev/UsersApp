@@ -14,15 +14,14 @@
             <EventTrigger.Actions>
                 <BeginStoryboard>
                     <Storyboard TargetProperty="Width" TargetName="authButton">
-                        <DoubleAnimation From="450" To="65"
+                        <DoubleAnimation From="450" To="70"
                                          AutoReverse="True"
                                          RepeatBehavior="5x" 
                                          Duration="0:0:4"/>
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger.Actions>
-        </EventTrigger>
-    
+        </EventTrigger>    
     </Window.Triggers>
 
         <Grid Background="#ffdadaca">

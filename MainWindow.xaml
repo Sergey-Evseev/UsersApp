@@ -49,9 +49,12 @@
                 <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Повторите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
                 <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="E-mail"
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         KeyDown="OnKeyDownHandler"
+                         />
                 <Button Content="Зарегистрироваться" x:Name="regButton" Margin="0 20" 
-                        Click="Button_Reg_Click"/>
+                        Click="Button_Reg_Click"                        
+                        />
             </StackPanel>
         </Border>
         <!--конец поля-->
