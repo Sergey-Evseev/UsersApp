@@ -75,5 +75,14 @@ namespace UsersApp
             mainWindow.Show();
             Close();
         }
+
+        //вызов обработчика кнопки Login при нажатии Enter на поле Email
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Button_Auth_Click(sender, e);
+            }    
+        }
     }
 }

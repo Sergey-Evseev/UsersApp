@@ -58,12 +58,13 @@
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                 
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль"
-                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             KeyDown="OnKeyDownHandler"/>
                 
                 <Button Content="Login" x:Name="authButton" Margin="0 20" 
                         Click="Button_Auth_Click"/>
             </StackPanel>
         </Border>
-        <!--конец поля-->
+        <!--конец поля (Border)-->
     </Grid>
 </Window>
