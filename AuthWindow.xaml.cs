@@ -85,10 +85,11 @@ namespace UsersApp
             }    
         }
 
-        //очистка поля ввода логина и пароля
+        //очистка полей ввода логина и пароля
         private void Button_Clear_Click(object sender, RoutedEventArgs e)
         {
             textBoxLogin.Clear();
+            passBox.Clear();
         }
     }
 }
