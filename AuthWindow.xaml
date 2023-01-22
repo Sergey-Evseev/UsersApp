@@ -50,8 +50,9 @@
                     <Button HorizontalAlignment="Left" Content="Registration" 
                             Click="Button_Reg_Click"/>
                     <!--у второй кнопки берем стиль из MaterialDesign-->
-                    <Button HorizontalAlignment="Right" Content="Войти"
-                            Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button HorizontalAlignment="Right" Content="Clear"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Click="Button_Clear_Click"/>
                 </Grid>
                 <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
