@@ -43,7 +43,9 @@
                 </Grid>
                 <!--cоздаем текстовые поля с подсказкой из библиотеки MD-->
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин"
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"                        
+                         TextChanged="Text_Login_Changed"
+                         />
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
                 <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Повторите пароль"

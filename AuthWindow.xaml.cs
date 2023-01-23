@@ -56,7 +56,7 @@ namespace UsersApp
                 }
                 if (authUser != null) //если user найден 
                 {
-                    MessageBox.Show("Everything's OK!", "Success"); 
+                    MessageBox.Show("Everything's OK!\nPlease wait...", "Success"); 
                     //переадресация на окно личного кабинета UserPageWindow//////////
                     UserPageWindow userPageWindow = new UserPageWindow();
                     userPageWindow.Show();
@@ -67,7 +67,9 @@ namespace UsersApp
                     MessageBox.Show("Incorrect credentials!", "Error", MessageBoxButton.OK,
                         (MessageBoxImage)MessageBoxImage.Error);
             }
-        }
+        }//конец обработчика нажатия кнопки Login
+
+
         //переадресация на форму регистрации главного окна MainWindow
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
@@ -76,7 +78,7 @@ namespace UsersApp
             Close();
         }
 
-        //вызов обработчика кнопки Login при нажатии Enter на поле Email
+        //вызов обработчика кнопки Login при нажатии Enter в поле Email
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)

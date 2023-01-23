@@ -9,6 +9,7 @@
         Title="Authorization" Height="450" Width="800">
     <!--название и размеры главного окна пограммы-->
 
+    <!--анимация кнопки Login-->
     <Window.Triggers>
         <EventTrigger RoutedEvent="Loaded">
             <EventTrigger.Actions>

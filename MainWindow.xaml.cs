@@ -95,6 +95,7 @@ namespace UsersApp
 
                 MessageBox.Show("Everything's OK", "Success");
 
+                //создаем и добавляем нового пользователя с переданными параметрами в БД
                 User user = new User(login, email, pass); //объект класса с параметрами на основе класса-модели
                 db.Users.Add(user); //добавление объекта User в список (DbSet)
                 db.SaveChanges(); //обмен с базой данных - сохранение объекта внутри базы данных
@@ -102,7 +103,7 @@ namespace UsersApp
                 //переадресация на окно авторизации в случае успешной регистрации
                 AuthWindow authWindow = new AuthWindow();
                 authWindow.Show();
-                Close(); //this.Hide();
+                Close(); //вместо this.Hide();
             }
         }
 
@@ -121,6 +122,25 @@ namespace UsersApp
             {
                 Button_Reg_Click(sender, e);
             }    
+        }
+        //проверка уникальности логина
+        private void Text_Login_Changed(object sender, TextChangedEventArgs e)
+        {
+            //записываем в строковую переменную значения поля имя текстбокса
+            string login = textBoxLogin.Text.Trim();//Trim удаляет пробелы в начале и конце строки
+            if (login.Length >= 5) 
+            {
+                User authUser = null;
+                using (ApplicationContext db = new ApplicationContext())
+                {
+                    authUser = db.Users.Where(b => b.Login == login).FirstOrDefault();
+                }
+                if (authUser != null) //если user с таким логином найден 
+                {
+                    MessageBox.Show($"{login} - user exists!", "Information", MessageBoxButton.OK,
+                        (MessageBoxImage)MessageBoxImage.Information);
+                }
+            }
         }
     }
 }
